@@ -2,6 +2,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+Firstly, There is a similar set of files in the "dev" branch, Kindly run the code of "dev" branch, Shift from "main" to "dev" branch and follow below instructions,Readme.MD is same for both branches.
+
 First, run the development server:
 
 ```bash
