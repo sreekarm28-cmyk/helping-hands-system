@@ -7,6 +7,19 @@ import { HandHeart, Users, Store, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
+// Add after imports in src/app/page.tsx
+console.log('Imported types:',
+  {
+    Button,
+    HandHeartType: typeof HandHeart,
+    UsersType: typeof Users,
+    StoreType: typeof Store,
+    AwardType: typeof Award,
+  }
+);
+try { console.log('Button keys:', Object.keys(Button || {})); } catch (e) { console.log('Button inspection failed', e); }
+
+
 export default function Home() {
   const { user, loading } = useAuth();
   const router = useRouter();
