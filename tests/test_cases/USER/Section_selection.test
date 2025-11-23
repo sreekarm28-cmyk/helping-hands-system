@@ -1,0 +1,23 @@
+const assert = require("assert");
+const { selectSection } = require("../src/section_selection");
+
+describe("FR-3: Section Selection Tests", () => {
+
+    it("should allow user to select a valid section", () => {
+        const result = selectSection("user1", "mart1", "billing");
+        assert.strictEqual(result.success, true);
+        assert.strictEqual(result.section, "billing");
+    });
+
+    it("should not allow selecting an invalid section", () => {
+        const result = selectSection("user1", "mart1", "invalid_section");
+        assert.strictEqual(result.success, false);
+        assert.strictEqual(result.message, "Section not available");
+    });
+
+    it("should not allow selecting a section from invalid mart", () => {
+        const result = selectSection("user1", "wrongMart", "billing");
+        assert.strictEqual(result.success, false);
+    });
+
+});
